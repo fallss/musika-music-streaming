@@ -5,7 +5,6 @@ import { usePlayerStore } from '../../store/playerStore';
 import { SongCard } from '../../components/music/SongCard';
 import { ArtistCard } from '../../components/music/ArtistCard';
 import { AlbumCard } from '../../components/music/AlbumCard';
-import { formatTime } from '../../utils/format';
 import {
   Sparkles,
   Flame,
@@ -40,7 +39,7 @@ export const HomePage: React.FC = () => {
     .filter((item): item is { song: typeof songs[0]; progress: number } => Boolean(item));
 
   // Daily recommendations
-  const dailyRecommendations = songs.slice(0, 5);
+  const dailyRecommendations = filteredSongs.slice(0, 5);
 
   // New releases
   const newReleases = [...songs].sort(

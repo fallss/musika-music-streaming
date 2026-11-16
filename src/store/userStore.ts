@@ -17,7 +17,7 @@ export const useUserStore = create<UserState>((set, get) => ({
   user: authStorage.getUser(),
   auth: authStorage.getAuth(),
 
-  login: (email: string, _password?: string) => {
+  login: (_email: string, _password?: string) => {
     const user = authStorage.getUser();
     // In demo mode, check email or allow demo login
     const auth: AuthState = {

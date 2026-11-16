@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Pause, Heart, Trash2 } from 'lucide-react';
+import { Play, Heart, Trash2 } from 'lucide-react';
 import { Song } from '../../types/music';
 import { usePlayerStore } from '../../store/playerStore';
 import { useLibraryStore } from '../../store/libraryStore';
